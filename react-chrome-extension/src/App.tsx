@@ -9,12 +9,13 @@ function App() {
   const onclick = async () => {
     const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
 
-    if (tab?.id !== undefined) {
+    if (tab?.id !== undefined && tab.url) {
       chrome.scripting.executeScript<string[], void>({
         target: { tabId: tab.id },
-        args: [colour], // passing in colour state which is in the context of our extension context into the content script of the currently active tab
-        func: (colour) => {
-          alert("Hello from my Vite Extension");
+        args: [colour, tab.url], // passing in colour state which is in the context of our extension context into the content script of the currently active tab. Same for activee tab url
+        func: (colour, url) => {
+          //const url = tab.url;
+          alert(`Hello from my Vite Extension - You are on URL : ${url}`);
           document.body.style.backgroundColor = colour;
         }
       });
