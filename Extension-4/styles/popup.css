@@ -1,0 +1,14 @@
+body {
+    width: 300px;
+    height: 150px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: auto;
+    height: 100%;
+}
+
+h1, .btn {
+    font-size: 2rem !important;
+}

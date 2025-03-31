@@ -1,0 +1,33 @@
+{
+  "name": "Extension-4",
+  "version": "1.0.0",
+  "manifest_version": 3,
+  "description": "Practice",
+  "permissions": [],
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "./scripts/contentScript.js"
+      ],
+      "css": [
+        "./styles/styles.css"
+      ]
+    }
+  ],
+  "background": {
+    "service_worker": "./scripts/background.js"
+  },
+  "action": {
+    "default_icon": {
+      "16": "assets/Logo.png",
+      "24": "assets/Logo.png",
+      "32": "assets/Logo.png",
+      "64": "assets/Logo.png"
+    },
+    "default_title": "Just Funnnn",
+    "default_popup": "popup.html"
+  }
+}
