@@ -1,0 +1,12 @@
+{
+  "name": "Word of the Day",
+  "version": "1.0.0",
+  "description": "Word of the day with meaning",
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "newtab.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}
