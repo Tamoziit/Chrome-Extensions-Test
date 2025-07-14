@@ -1,0 +1,10 @@
+{
+  "name": "ToDo List",
+  "version": "1.0.0",
+  "description": "ToDo List Extension",
+  "action": {
+    "default_title": "ToDo List",
+    "default_popup": "popout.html"
+  },
+  "manifest_version": 3
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ToDo List</title>
+
+  <style>
+    body {
+      width: 300px;
+    }
+
+    .todo-items,
+    .todo-items li {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .todo-items li {
+      padding: 10px;
+      border-bottom: 2px solid gray;
+      display: flex;
+      justify-content: space-between;
+      cursor: pointer;
+      font-size: medium;
+    }
+
+    .todo-items li:hover {
+      background: rgba(0, 0, 0, 0.25);
+      font-weight: 500;
+    }
+
+    .todo-items li.done .item {
+      text-decoration: line-through;
+      text-decoration-color: rgb(2, 82, 2);
+    }
+
+    .todo-items li div span {
+      margin: 5px;
+    }
+
+    .create-todo {
+      cursor: pointer;
+    }
+
+    .new-item {
+      display: none;
+    }
+
+    .new-item button {
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>My ToDo's</h1>
+
+  <button class="create-todo">Add New Item</button>
+  <div class="new-item">
+    <input type="text" />
+    <button>Save</button>
+  </div>
+
+  <ul class="todo-items">
+
+  </ul>
+
+  <script src="popout.js"></script>
+</body>
+
+</html>
