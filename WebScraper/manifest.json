@@ -1,0 +1,28 @@
+{
+  "name": "WebScraper",
+  "version": "1.0.0",
+  "description": "WebScraper Automation Extension",
+  "permissions": [
+    "scripting",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "action": {
+    "default_title": "WebScraper",
+    "default_popup": "popout.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "contentScript.js"
+      ],
+      "run_at": "document_end"
+    }
+  ],
+  "manifest_version": 3
+}
